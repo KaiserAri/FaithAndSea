@@ -41,4 +41,7 @@ public class Artwork {
     @Builder.Default
     @Column(name = "view_count")
     private Integer viewCount = 0;
+    @ManyToOne
+    @JoinColumn(name = "collection_id")
+    private Collection collection;
 }
